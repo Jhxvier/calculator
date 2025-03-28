@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script>
+        var num1 = 0;
+        var num2 = 0;
+        var SeleccionPunto = false; 
+        var signo = "";
+               
+
+        function FunLimpiar(){
+           document.calculadora.resultado.value = "0";
+           document.calculadora.signo.value = "";
+        }
+
+        function BotonUno(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "1";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("1");
+            }
+            
+        }
+
+        function BotonDos(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "2";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("2");
+            }
+            
+        }
+
+        function BotonTres(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "3";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("3");
+            }
+            
+        }
+
+        function BotonCuatro(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "4";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("4");
+            }
+            
+        }
+
+        function BotonCinco(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "5";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("5");
+            }
+            
+        }
+
+        function BotonSeis(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "6";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("6");
+            }
+            
+        }
+
+        function BotonSiete(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "7";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("7");
+            }
+            
+        }
+
+        function BotonOcho(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "8";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("8");
+            }
+            
+        }
+
+        function BotonNueve(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "9";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("9");
+            }
+            
+        }
+
+        function BotonCero(){
+            //Almacena en un variable el 0 que está en pantalla 
+            var ingreso = document.calculadora.resultado.value;
+
+            if (ingreso == "0"){
+                document.calculadora.resultado.value = "0";
+            } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat("0");
+            }
+            
+        }
+
+        function BotonPunto(){
+
+           
+
+            if (SeleccionPunto == false){
+                //Almacena en un variable el 0 que está en pantalla 
+                var ingreso = document.calculadora.resultado.value;
+                
+                if (ingreso == "0"){
+                document.calculadora.resultado.value = "0.";
+                } else{ //Si no se cumple almacena el dato en pantalla que ahora ya no es 0 y a la par le coloca el 1
+                document.calculadora.resultado.value = ingreso.concat(".");
+                
+                }
+
+                SeleccionPunto = true;
+            }
+
+            
+            
+        }
+
+        function BotonDividir(){
+            document.calculadora.signo.value = "/";
+            signo = document.calculadora.signo.value;
+            num1 = parseFloat(document.calculadora.resultado.value); 
+            document.calculadora.resultado.value = "0";
+            SeleccionPunto = false;
+        }
+
+        
+        function BotonMultiplicar(){
+            document.calculadora.signo.value = "*";
+            signo = document.calculadora.signo.value;
+            num1 = parseFloat(document.calculadora.resultado.value); 
+            document.calculadora.resultado.value = "0";
+            SeleccionPunto = false;
+        }
+
+        function BotonRestar(){
+            document.calculadora.signo.value = "-";
+            signo = document.calculadora.signo.value;
+            num1 = parseFloat(document.calculadora.resultado.value); 
+            document.calculadora.resultado.value = "0";
+            SeleccionPunto = false;
+            
+        }
+
+        function BotonSumar(){
+            document.calculadora.signo.value = "+";
+            signo = document.calculadora.signo.value;
+            num1 = parseFloat(document.calculadora.resultado.value); 
+            document.calculadora.resultado.value = "0";
+            SeleccionPunto = false;
+           
+        }
+
+        function BotonIgual(){
+            
+            if (signo == "/"){
+            num2 = parseFloat(document.calculadora.resultado.value); 
+            num1 = num1 / num2;
+            document.calculadora.resultado.value = num1;
+            document.calculadora.signo.value = "";
+            }
+            
+            else if(signo == "*"){
+            num2 = parseFloat(document.calculadora.resultado.value); 
+            num1 = num1 * num2;
+            document.calculadora.resultado.value = num1;
+            document.calculadora.signo.value = "";
+            }
+
+            else if(signo == "-"){
+            num2 =parseFloat(document.calculadora.resultado.value); 
+            num1 = num1 - num2;
+            document.calculadora.resultado.value = num1;
+            document.calculadora.signo.value = "";
+            }
+
+            else if(signo == "+"){
+            num2 = parseFloat(document.calculadora.resultado.value); 
+            num1 = num1 + num2;
+            document.calculadora.resultado.value = num1;
+            document.calculadora.signo.value = "";
+            }
+            SeleccionPunto = false;
+        }
+       
+
+
+
+
+
+
+    </script>
+
+    <style>
+
+        #wrapper{
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        #principal{
+            width: 800px;
+            height: 50px;
+            background-color: rgb(47, 218, 9);
+            margin: 0 auto;
+        }
+        h2{
+            padding-top: 10px;
+            text-align: center;
+        }
+        #relleno{
+            width: 800px;
+            height: 40px;
+            background-color: rgb(241, 255, 49);
+            margin: 0 auto;
+        }
+
+        #calculadoraArea{
+            width: 800px;
+            height: 500px;
+            background-image: url(img/Fondo.jpg);
+            margin: 0 auto;
+            position: relative;
+        }
+        form{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(187, 211, 214);
+            margin: 0 auto;
+            position: absolute;
+            left: 200px;
+            top: 50px;
+            border-radius: 10px;
+            border: 5px solid yellow;
+        }
+
+        #campo1{
+            width: 200px;
+            height: 30px;
+            border: 1px solid #000;
+            text-align: right;
+            margin-left: 10px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        #campo2{
+            width: 40px;
+            height: 30px;
+            border: 1px solid #000;
+            text-align: center;
+            margin-left: 5px;
+            border-radius: 10px;
+        }
+
+        #clean{
+            width: 100px;
+            height: 25px;
+            border: 1px solid #000;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-left: 15px;
+            background-color: rgb(248, 97, 127);
+        }
+
+        #seven, #four, #one, #zero{
+            width: 55px;
+            height: 40px;
+            font-weight: bold;
+            background-color: rgb(26, 208, 32);
+            border: 1px solid #000;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        #eight, #nine, #five, #six, #two, #three, #point{
+            width: 55px;
+            height: 40px;
+            font-weight: bold;
+            background-color: rgb(26, 208, 32);
+            border: 1px solid #000;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        #divi, #multi, #resta{
+            width: 55px;
+            height: 40px;
+            font-weight: bold;
+            border: 1px solid #000;
+            border-radius: 20px;
+            background-color: rgb(235, 244, 49);
+            margin-left: 20px;
+        }
+
+        #suma{
+            width: 55px;
+            height: 40px;
+            font-weight: bold;
+            border: 1px solid #000;
+            border-radius: 20px;
+            background-color: rgb(235, 244, 49);
+            margin-left: 84px;
+        }
+
+        #igual{
+            width: 80px;
+            height: 190px;
+            font-weight: bold;
+            border: 1px solid #000;
+            border-radius: 20px;
+            background-color: rgb(7, 131, 226);
+            margin-left: 8px;
+            position: absolute;
+            top: 157px;
+        }
+
+        input#clean:hover, #seven:hover, #four:hover, #one:hover, #zero:hover, #eight:hover, #nine:hover, #five:hover, #six:hover, #two:hover, #three:hover, #point:hover, #divi:hover, #multi:hover, #resta:hover, #suma:hover, #igual:hover{
+            background-color: white;
+            color: black;
+        }
+
+        footer{
+            width: 100%;
+            height: 80px;
+            background-color: green;
+            color: white;
+            float: left;
+        }
+
+        
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="principal">
+            <h2>Calculadora</h2>
+        </div>
+        <div id="relleno"></div>
+
+        <div id="calculadoraArea">
+            
+        <form action="" name="calculadora">
+            <h2>Calculadora</h2>
+
+            <input type="text" name="resultado" id="campo1" disabled value="0">
+            <input type="text" name="signo" id="campo2" disabled>
+
+            <br>
+
+            <input type="button" name="limpiar" id="clean" value="C" onclick="FunLimpiar()">
+
+            <br>
+
+            <input type="button" name="siete" id="seven" value="7" onclick="BotonSiete()">
+            <input type="button" name="ocho" id="eight" value="8" onclick="BotonOcho()">
+            <input type="button" name="nueve" id="nine" value="9" onclick="BotonNueve()">
+            <input type="button" name="signoDividir" id="divi" value="/" onclick="BotonDividir()">
+            <input type="button" name="signoIgual" id="igual" value="=" onclick="BotonIgual()">
+            <br>
+            <input type="button" name="cuatro" id="four" value="4" onclick="BotonCuatro()">
+            <input type="button" name="cinco" id="five" value="5" onclick="BotonCinco()">
+            <input type="button" name="seis" id="six" value="6" onclick="BotonSeis()">
+            <input type="button" name="signoMulti" id="multi" value="*" onclick="BotonMultiplicar()">
+            <br>
+            <input type="button" name="uno" id="one" value="1" onclick="BotonUno()">
+            <input type="button" name="dos" id="two" value="2" onclick="BotonDos()">
+            <input type="button" name="tres" id="three" value="3" onclick="BotonTres()">
+            <input type="button" name="signoResta" id="resta" value="-" onclick="BotonRestar()">
+            <br>
+            <input type="button" name="cero" id="zero" value="0" onclick="BotonCero()">
+            <input type="button" name="punto" id="point" value="." onclick="BotonPunto()">
+            <input type="button" name="signoSuma" id="suma" value="+" onclick="BotonSumar()">
+            
+
+        </form>
+
+        </div>
+        <footer>
+            <h2>Powered by Javier Leiva</h2>
+        </footer>
+
+        
+       
+
+    </div>
+    
+</body>
+</html>
